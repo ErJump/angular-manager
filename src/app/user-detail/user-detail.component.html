@@ -1,31 +1,38 @@
-<form action="">
+{{user.name}}
+{{user.lastname}}
+{{user.fiscalcode}}
+{{user.email}}
+{{user.phone}}
+{{user.province}}
+{{user.age}}
+<form>
     <div class="form-group">
         <label for="name">Name</label>
-        <input type="text" class="form-control" id="name" placeholder="Enter name">
+        <input name="name" [(ngModel)]="user.name" type="text" class="form-control" id="name" placeholder="Enter name">
     </div>
     <div class="form-group">
         <label for="lastname">Last name</label>
-        <input type="text" class="form-control" id="lastname" placeholder="Enter last name">
+        <input name="lastname" [(ngModel)]="user.lastname" type="text" class="form-control" id="lastname" placeholder="Enter last name">
     </div>
     <div class="form-group">
         <label for="fiscalcode">Fiscal code</label>
-        <input type="text" class="form-control" id="fiscalcode" placeholder="Enter fiscal code">
+        <input name="fiscalcode" [(ngModel)]="user.fiscalcode" type="text" class="form-control" id="fiscalcode" placeholder="Enter fiscal code">
     </div>
     <div class="form-group">
         <label for="email">Email</label>
-        <input type="email" class="form-control" id="email" placeholder="Enter email">
+        <input name="email" [(ngModel)]="user.email" type="email" class="form-control" id="email" placeholder="Enter email">
     </div>
     <div class="form-group">
         <label for="phone">Phone</label>
-        <input type="text" class="form-control" id="phone" placeholder="Enter phone">
+        <input name="phone" [(ngModel)]="user.phone" type="text" class="form-control" id="phone" placeholder="Enter phone">
     </div>
     <div class="form-group">
         <label for="province">Province</label>
-        <input type="text" class="form-control" id="province" placeholder="Enter province">
+        <input name="province" [(ngModel)]="user.province" type="text" class="form-control" id="province" placeholder="Enter province">
     </div>
     <div class="form-group">
         <label for="age">Age</label>
-        <input type="number" class="form-control" id="age" placeholder="Enter age">
+        <input name="age" [(ngModel)]="user.age" type="number" class="form-control" id="age" placeholder="Enter age">
     </div>
     <div class="form-group">
         <button class="btn-success">Save</button>
