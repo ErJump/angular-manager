@@ -1,3 +1,4 @@
+import { UserService } from './../services/users.service';
 import { Component, Input } from '@angular/core';
 import { User } from '../classes/User';
 
@@ -8,7 +9,10 @@ import { User } from '../classes/User';
 })
 export class UserDetailComponent {
   @Input() user : User | any;
+  constructor(private uS: UserService) { }
   saveUser() {
-    alert(this.user.name)
+    if (this.user.id) {
+      this.uS.updateUser(this.user);
+    }
   }
 }

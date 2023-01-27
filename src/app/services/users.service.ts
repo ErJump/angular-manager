@@ -50,8 +50,12 @@ export class UserService {
   getUsers(){
     return this.users;
   }
-  deleteUser(user : any){
+  deleteUser(user : User){
     const index = this.users.indexOf(user);
     this.users.splice(index, 1);
+  }
+  updateUser(user : User) {
+    const index = this.users.findIndex((u: User) => u.id === user.id);
+    this.users[index] = user;
   }
 }
