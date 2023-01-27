@@ -10,10 +10,14 @@ import { User } from '../interfaces/user';
 export class UserComponent {
   @Input() user : User | any;
   @Output('onDeleteUser') userDeleted = new EventEmitter();
+  @Output() onSelectUser = new EventEmitter(); 
   constructor (private service: UserService){
   }
   deleteUser(user : User){
     //this.service.deleteUser(user);
     this.userDeleted.emit(user);
+  }
+  updateUser(user : User){
+    this.onSelectUser.emit(user);
   }
 }

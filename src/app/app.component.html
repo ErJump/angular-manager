@@ -1,8 +1,13 @@
 <div class="container-lg">
   <div class="row">
-    <div class="col-12">
-      <h1 class="text-center">Angular manager</h1>
-      <app-users></app-users>
+    <h1 class="text-center">Angular manager</h1>
+    <div class="col-12 wrapper">
+      <div class="users">
+        <app-users (updateUser)="updateUser($event)"></app-users>
+      </div>
+      <div class="userDetail">
+        <app-user-detail *ngIf="userSelected"></app-user-detail>
+      </div>
     </div>
   </div>
 </div>

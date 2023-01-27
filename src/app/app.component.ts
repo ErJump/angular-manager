@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { User } from './interfaces/user';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-manager';
+  userSelected : User | any;
+  updateUser(user : User){
+    this.userSelected = user;
+  }
 }
