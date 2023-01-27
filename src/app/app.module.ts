@@ -1,4 +1,4 @@
-import { UserService } from './users.service';
+import { UserService } from './services/users.service';
 import { UsersComponent } from './users/users.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
