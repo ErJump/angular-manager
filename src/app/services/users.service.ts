@@ -58,4 +58,8 @@ export class UserService {
     const index = this.users.findIndex((u: User) => u.id === user.id);
     this.users[index] = user;
   }
+  addUser(user : User) {
+    user.id = this.users.length + 1;
+    this.users.push(user);
+  }
 }

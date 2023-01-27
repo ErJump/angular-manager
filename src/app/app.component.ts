@@ -9,7 +9,13 @@ import { User } from './classes/User';
 export class AppComponent {
   title = 'angular-manager';
   userSelected = new User();
+  formActive = false;
   updateUser(user : User){
     this.userSelected = user;
+    this.formActive = true;
+  }
+  addNewUser(){
+    this.formActive = true;
+    this.userSelected = new User();
   }
 }

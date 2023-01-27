@@ -13,6 +13,8 @@ export class UserDetailComponent {
   saveUser() {
     if (this.user.id) {
       this.uS.updateUser(this.user);
+    } else {
+      this.uS.addUser(this.user);
     }
   }
 }
