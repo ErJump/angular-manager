@@ -8,7 +8,7 @@ import { User } from './classes/User';
 })
 export class AppComponent {
   title = 'angular-manager';
-  userSelected : User | any;
+  userSelected = new User();
   updateUser(user : User){
     this.userSelected = user;
   }

@@ -8,14 +8,14 @@ export class User implements UserInterface {
     province: string;
     phone: string;
     age: number;
-    constructor(id: number, name: string, lastname: string, email: string, fiscalcode: string, province: string, phone: string, age: number){
-        this.id = id;
-        this.name = name;
-        this.lastname = lastname;
-        this.email = email;
-        this.fiscalcode = fiscalcode;
-        this.province = province;
-        this.phone = phone;
-        this.age = age;
+    constructor(){
+        this.id = 0;
+        this.name = '';
+        this.lastname = '';
+        this.email = '';
+        this.fiscalcode = '';
+        this.province = '';
+        this.phone = '';
+        this.age = 0;
     }
 }
