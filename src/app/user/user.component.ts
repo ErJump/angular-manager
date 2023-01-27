@@ -1,6 +1,6 @@
 import { UserService } from '../services/users.service';
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { User } from '../interfaces/user';
+import { User } from '../classes/User';
 
 @Component({
   selector: 'tr[app-user]',

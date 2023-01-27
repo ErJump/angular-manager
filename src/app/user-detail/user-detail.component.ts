@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { User } from '../interfaces/user';
+import { User } from '../classes/User';
 
 @Component({
   selector: 'app-user-detail',
@@ -8,4 +8,7 @@ import { User } from '../interfaces/user';
 })
 export class UserDetailComponent {
   @Input() user : User | any;
+  saveUser() {
+    alert(this.user.name)
+  }
 }

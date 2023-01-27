@@ -1,6 +1,6 @@
 import { UserService } from '../services/users.service';
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { User } from '../interfaces/user';
+import { User } from '../classes/User';
 
 @Component({
     selector: 'app-users',
@@ -21,6 +21,7 @@ export class UsersComponent implements OnInit{
         this.service.deleteUser(user);
     }
     onSelectUser(user : User){
-        this.updateUser.emit(user);
+        const userCopy = {...user};
+        this.updateUser.emit(userCopy);
     }
 }
