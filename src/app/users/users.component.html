@@ -7,6 +7,7 @@
         <th>Email</th>
         <th>Phone</th>
         <th>Province</th>
+        <th>Actions</th>
     </tr>
-    <tr app-user *ngFor="let user of users" [user]="user"></tr>
+    <tr app-user *ngFor="let user of users" [user]="user" (onDeleteUser)="onDeleteUser($event)"></tr>
 </table>
